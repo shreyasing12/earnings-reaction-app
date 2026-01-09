@@ -1,3 +1,7 @@
+import yfinance as yf
+import pandas as pd
+import datetime as dt
+
 def get_earnings_analysis(ticker, limit=4):
     stock = yf.Ticker(ticker)
 
@@ -40,4 +44,5 @@ def get_earnings_analysis(ticker, limit=4):
         })
 
     return pd.DataFrame(results)
+
 
